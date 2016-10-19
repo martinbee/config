@@ -2,4 +2,6 @@ Install homebrew
 make sure vim with lua is installed
 Add spf13
 Add tmux using brew
-Copy the .tmux.conf file and the .vimrc.local files to your /
+brew install reattach-to-user-namespace (for copy pasting between vim and tmux
+and system)
+Copy the .tmux.conf file, the .vimrc.local, .bash_profile files to your /

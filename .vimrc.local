@@ -1,3 +1,6 @@
+"Vim Tmux Navigator
+Plugin 'christoomey/vim-tmux-navigator'
+
 " vim-airline configuration
 let g:airline_powerline_fonts=1
 let g:airline#extensions#bufferline#enabled = 0
