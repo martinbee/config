@@ -40,8 +40,8 @@ set softtabstop=2
 let NERDTreeQuitOnOpen=0
 
 " Make solarized work properly with iTerm2 when using solarized scheme
-let g:solarized_termcolors=16
-color solarized
+"let g:solarized_termcolors=16
+"color solarized
 
 " Set textwidth to 80 and colorcolumn to textwidth+1 so that text will wrap
 set textwidth=80
