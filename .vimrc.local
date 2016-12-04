@@ -25,8 +25,35 @@ highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
 " vim-airline configuration
-let g:airline_powerline_fonts=1
+" symbols , , , , , , and 
 let g:airline#extensions#bufferline#enabled = 0
+let g:airline_theme = 'seoul256'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+call airline#parts#define_accent('syntastic', 'red')
+call airline#parts#define_accent('whitespace', 'red')
+
+let g:airline_section_a = airline#section#create(['mode'])
+let g:airline_section_y = airline#section#create(['%L'])
+let g:airline#extensions#default#section_truncate_width = { 'x': 30, 'y': 30 }
+let g:airline#extensions#default#layout = [
+  \ ['a', 'c'],
+  \ ['x', 'y']
+  \ ]
+let g:airline_mode_map = {
+  \ '__' : '-',
+  \ 'n'  : 'N',
+  \ 'i'  : 'I',
+  \ 'R'  : 'R',
+  \ 'c'  : 'C',
+  \ 'v'  : 'V',
+  \ 'V'  : 'V',
+  \ '' : 'V',
+  \ 's'  : 'S',
+  \ 'S'  : 'S',
+  \ '' : 'S',
+  \ }
 
 " Map , to leader
 let mapleader = ","
@@ -63,10 +90,11 @@ set softtabstop=2
 let NERDTreeQuitOnOpen=0
 
 " Make solarized work properly with iTerm2 when using solarized scheme
-let g:solarized_termcolors=16
-color solarized
+"syntax enable
+"let g:solarized_termcolors=16
+"color solarized
 
-" Set textwidth to 80 and colorcolumn to textwidth+1 so that text will wrap
+"" Set textwidth to 80 and colorcolumn to textwidth+1 so that text will wrap
 set textwidth=80
 set colorcolumn=+1
 
@@ -74,5 +102,10 @@ set colorcolumn=+1
 "Plugin 'poetic-labs/pastelesque'
 "colorscheme pastelesque
 
-"Light scheme (change iterm to solarized light)
-set background=light
+"Seoul Color scheme
+"Plugin 'junegunn/seoul256.vim'
+let g:seoul256_background = 236
+color seoul256
+
+"Light scheme (change color scheme to light background)
+"set background=light
