@@ -1,3 +1,6 @@
+" enable spell check for txt/md files on unix
+autocmd FileType md,markdown,txt setlocal spell
+
 "Vim Tmux Navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
