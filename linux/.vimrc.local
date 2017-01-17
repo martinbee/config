@@ -1,0 +1,116 @@
+"Vim Tmux Navigator
+Plugin 'christoomey/vim-tmux-navigator'
+
+"Vim Linting
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_args="--ext .js,.jsx"
+
+"let g:syntastic_error_symbol = '❌'
+"let g:syntastic_style_error_symbol = '⁉️'
+"let g:syntastic_warning_symbol = '⚠️'
+"let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
+
+" vim-airline configuration
+" symbols , , , , , , and 
+let g:airline#extensions#bufferline#enabled = 0
+let g:airline_theme = 'seoul256'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+call airline#parts#define_accent('syntastic', 'red')
+call airline#parts#define_accent('whitespace', 'red')
+
+let g:airline_section_a = airline#section#create(['mode'])
+let g:airline_section_y = airline#section#create(['%L'])
+let g:airline#extensions#default#section_truncate_width = { 'x': 30, 'y': 30 }
+let g:airline#extensions#default#layout = [
+  \ ['a', 'c'],
+  \ ['x', 'y']
+  \ ]
+let g:airline_mode_map = {
+  \ '__' : '-',
+  \ 'n'  : 'N',
+  \ 'i'  : 'I',
+  \ 'R'  : 'R',
+  \ 'c'  : 'C',
+  \ 'v'  : 'V',
+  \ 'V'  : 'V',
+  \ '' : 'V',
+  \ 's'  : 'S',
+  \ 'S'  : 'S',
+  \ '' : 'S',
+  \ }
+
+" Map , to leader
+let mapleader = ","
+
+" Map jj to <Esc>
+:inoremap jj <Esc>
+
+" Use ; as :
+nnoremap ; :
+
+" Map comma space to unhighlight
+nnoremap <leader><space> :noh<cr>
+
+" Indent every line in the file with <leader>i
+nnoremap <Leader>i mmgg=G`m
+
+" Function to removes trailing spaces
+function! TrimWhiteSpace()
+  %s/\s\+$//e
+endfunction
+
+" Remove trailing spaces on file write, append, buffwrite, and more
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
+
+" Set tabs to 2 spaces
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+
+" Don't close NERDTree when opening a file
+let NERDTreeQuitOnOpen=0
+
+" Make solarized work properly with iTerm2 when using solarized scheme
+"syntax enable
+"let g:solarized_termcolors=16
+"color solarized
+
+"" Set textwidth to 80 and colorcolumn to textwidth+1 so that text will wrap
+set textwidth=80
+set colorcolumn=+1
+
+"Leon's color scheme (comment out solarized)
+"Plugin 'poetic-labs/pastelesque'
+"colorscheme pastelesque
+
+"Seoul Color scheme
+"Plugin 'junegunn/seoul256.vim'
+let g:seoul256_background = 236
+color seoul256
+
+"Light scheme (change color scheme to light background)
+"set background=light
+
+"Typescript
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
