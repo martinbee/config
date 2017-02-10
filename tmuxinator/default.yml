@@ -39,4 +39,4 @@ windows:
       panes:
         - vim
         - #empty, will just run plain zsh
-        - npm run start
+        - #empty, will just run plain zsh
