@@ -1,10 +1,17 @@
 # General Guidelines
 - Install homebrew
+- Install Git
+- Install iterm2 or guake
+- If iterm, set hide iterm in preferences/keys
 - Check if vim with lua is installed (if not install via homebrew)
 - Follow spf13 vim installation instructions
 - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
-- Clone this repo and run install.sh to get fonts: https://github.com/vim-airline/vim-airline/issues/142
+- Brew install tmux
+- Brew install reattach-to-user-namespace if on mac
+- Gem install tmuxinator
+- Copy .tmuxinator/ from config to your root
+- Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
+- Choose a powerline font for iterm
+- Import seoul color scheme for iterm2
 - Set up OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
-- gem install tmuxinator
-- add the default.yml to .tmuxinator/
 - Add custom airline theme seoul256
