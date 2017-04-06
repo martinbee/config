@@ -1,6 +1,7 @@
 # General Guidelines
 - Install homebrew
 - Install Git
+- Install npm using brew
 - Install iterm2 or guake
 - If iterm, set hide iterm in preferences/keys
 - Check if vim with lua is installed (if not install via homebrew)
@@ -8,6 +9,7 @@
 - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
 - Brew install tmux
 - Brew install reattach-to-user-namespace if on mac
+- Brew install the_silver_searcher
 - Gem install tmuxinator
 - Copy .tmuxinator/ from config to your root
 - Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
@@ -15,3 +17,7 @@
 - Import seoul color scheme for iterm2
 - Set up OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
 - Add custom airline theme seoul256
+
+- Github
+- Copy github.config
+- Install Icdiff (https://github.com/jeffkaufman/icdiff)
