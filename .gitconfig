@@ -21,7 +21,7 @@
   # via https://medium.com/@payload.dd/thanks-for-the-git-st-i-will-use-this-4da5839a21a4
 
 [commit]
-  gpgSign = true
+  # gpgSign = true
   # "other people can trust that the changes you've made really were made by you"
   # https://help.github.com/articles/about-gpg/
   # https://git-scm.com/docs/git-config#git-config-commitgpgSign

@@ -1,0 +1,28 @@
+# General Guidelines
+- Use package manager (apt, etc.)
+- Examples will be using apt
+
+- Install GIT
+  - sudo apt-get install git git-gui gitk
+- Install node/npm
+  - sudo apt-get install nodejs
+  - sudo apt-get install npm
+- Install terminal if needed (guake, etc.)
+  - sudo apt-get install guake -y
+- Install vim
+  - sudo apt-get install vim
+- Install spf13
+  - Here for instructions (https://github.com/spf13/spf13-vim)
+  - Current as of April 2017 curl: curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+  - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
+- Gem install tmuxinator if desired
+  - Copy .tmuxinator/ from config to your root
+- Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
+- Install zsh
+  - sudo apt-get install zsh
+- Set zsh to be default shell (look up commands)
+- Install OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+- Copy .tmux.conf, .vimrc.local, .zshrc, and .gitconfig to ~/
+- Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
+- Install Icdiff (https://github.com/jeffkaufman/icdiff) if desired
