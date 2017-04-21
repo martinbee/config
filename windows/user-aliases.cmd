@@ -12,6 +12,7 @@ gc=git commit -m $*
 gac=ga && gc
 go=git checkout
 gps=git push
+gpl=git pull
 ls=ls --show-control-chars -F --color $*
 pwd=cd
 clear=cls
