@@ -1,0 +1,15 @@
+# General Guidelines
+- Install cmder (http://cmder.net/)
+- Import cmder.xml as conemu settings to get aliases and macros
+- Install Git for windows
+- Install Node (https://nodejs.org/en/download/)
+- Install curl (https://curl.haxx.se/download.html)
+- Install spf13
+  - Follow spf13 vim installation instructions
+	- Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
+- Install chocolatey
+- Install the_silver_searcher (choco install ag)
+- Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
+- Install powerline fonts
+- Import seoul color scheme
+- Copy github.config
