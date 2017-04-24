@@ -27,7 +27,8 @@
 - Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
 - Install zsh
   - sudo apt-get install zsh
-- Set zsh to be default shell (look up commands)
+- Set zsh to be default shell
+  - chsh -s $(which zsh)
 - Install OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 - Copy .tmux.conf, .vimrc.local, .zshrc, and .gitconfig to ~/
