@@ -10,11 +10,18 @@
 - Install terminal if needed (guake, etc.)
   - sudo apt-get install guake -y
 - Install vim
-  - sudo apt-get install vim
+  - sudo apt-get install vim or vim-nox (more features and lua)
+- Install gnone-tweak-tool
+  - sudo apt-get install gnome-tweak-tool
+  - Change caps lock to control
+- Install curl
+  - sudo apt-get install curl
 - Install spf13
   - Here for instructions (https://github.com/spf13/spf13-vim)
   - Current as of April 2017 curl: curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
   - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
+- Install tmux
+  - sudo apt-get install tmux
 - Gem install tmuxinator if desired
   - Copy .tmuxinator/ from config to your root
 - Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
