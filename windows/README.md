@@ -1,0 +1,16 @@
+# General Guidelines
+- Install cmder (http://cmder.net/)
+- Import cmder.xml as conemu settings to get aliases and macros
+- Install Git for windows
+- Install Node (https://nodejs.org/en/download/)
+- Install curl (https://curl.haxx.se/download.html)
+- Install spf13
+  - Here for instructions (https://github.com/spf13/spf13-vim)
+  - Current as of April 2017 curl: curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+  - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
+- Install chocolatey (https://chocolatey.org/)
+- Install the_silver_searcher (choco install ag)
+- Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
+	- Install powerline fonts
+- Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
+- Copy github.config

@@ -81,21 +81,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Begin NOV ------------------------------
-
-# Java
-JAVA_HOME=/usr/lib/jvm/java-8-oracle;
-export JAVA_HOME
-export PATH=$PATH:$JAVA_HOME/bin
-
-# Tomcat (java server)
-export CATALINA_HOME=/opt/tomcat
-
-# scripts
-source /home/martin/coding/nov/bin/nov.bash
-
-# END NOV ------------------------------
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -120,6 +105,3 @@ alias go='git checkout'
 
 # tmuxinator
 alias mux='tmuxinator'
-
-# typescript
-alias tsag="ag -G '\.(ts|html)$'"

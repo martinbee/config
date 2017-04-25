@@ -1,5 +1,0 @@
-" Typescript {
-  Bundle 'leafgarland/typescript-vim'
-  Bundle 'Shougo/vimproc.vim'
-  Bundle 'Quramy/vim-js-pretty-template'
-  Bundle 'Quramy/tsuquyomi'
