@@ -1,3 +1,6 @@
+# Set node to dev
+export NODE_ENV='dev'
+
 # tmuxinator editor setup
 export EDITOR='vim'
 
@@ -112,3 +115,6 @@ alias go='git checkout'
 
 # tmuxinator
 alias mux='tmuxinator'
+
+# http-server
+alias hs="node /usr/bin/http-server"
