@@ -34,3 +34,14 @@
 - Copy .tmux.conf, .vimrc.local, .zshrc, and .gitconfig to ~/
 - Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
 - Install Icdiff (https://github.com/jeffkaufman/icdiff) if desired
+- Linting
+  - sudo npm install -g eslint eslint-config-airbnb eslint-plugin-import
+    eslint-plugin-jsx eslint-plugin-react eslint-plugin-jsx-a11y
+    eslint-plugin-mocha esformatter
+  - eslint --init in your project
+  - PluginInstall to ensure esformatter plugin is properly installed
+  - Change esformatter presets
+    - Go to (/usr/local/lib/node_modules/esformatter/lib/preset/);
+    - Modify default-whitespace-after and default-whitespace-before so that
+      ObjectPatternClosing or OpeningBrace have a 1 and not 0.
+    - To use esformatter type ',fe' in vim in normal or visual mode

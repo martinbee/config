@@ -2,6 +2,11 @@
 Plugin 'christoomey/vim-tmux-navigator'
 
 "Vim Linting
+Plugin 'millermedeiros/vim-esformatter'
+
+nnoremap <silent> <leader>fe :Esformatter<CR>
+vnoremap <silent> <leader>fe :EsformatterVisual<CR>
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -14,10 +19,10 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_args="--ext .js,.jsx"
 
-"let g:syntastic_error_symbol = '❌'
-"let g:syntastic_style_error_symbol = '⁉️'
-"let g:syntastic_warning_symbol = '⚠️'
-"let g:syntastic_style_warning_symbol = '💩'
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
 
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
