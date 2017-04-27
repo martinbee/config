@@ -114,8 +114,3 @@ color seoul256
 
 "Light scheme (change color scheme to light background)
 "set background=light
-
-"Typescript
-autocmd FileType typescript JsPreTmpl html
-autocmd FileType typescript syn clear foldBraces
-autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
