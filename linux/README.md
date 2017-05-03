@@ -19,6 +19,7 @@
 - Install spf13
   - Here for instructions (https://github.com/spf13/spf13-vim)
   - Current as of April 2017 curl: curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+  - Remove Bundle 'amirh/HTML-AutoCloseTag' from .spf13-vim-3/.vimrc.bundles and add Bundle 'alvan/vim-closetag'
   - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
 - Install tmux
   - sudo apt-get install tmux

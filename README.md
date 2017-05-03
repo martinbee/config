@@ -1,23 +1,54 @@
 # General Guidelines
-- Install homebrew
-- Install Git
-- Install npm using brew
-- Install iterm2 or guake
-- If iterm, set hide iterm in preferences/keys
-- Check if vim with lua is installed (if not install via homebrew)
-- Follow spf13 vim installation instructions
-- Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
-- Brew install tmux
-- Brew install reattach-to-user-namespace if on mac
-- Brew install the_silver_searcher
-- Gem install tmuxinator
-- Copy .tmuxinator/ from config to your root
-- Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
-- Choose a powerline font for iterm
-- Import seoul color scheme for iterm2
-- Set up OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
-- Add custom airline theme seoul256
+- Use package manager (Homebrew, apt, etc.)
+- For Mac we will use Homebrew
 
-- Github
-- Copy github.config
-- Install Icdiff (https://github.com/jeffkaufman/icdiff)
+- Install Iterm2
+  - https://www.iterm2.com/
+  - In preferences/keys on the bottom right enable show/hide Iterm2 with system wide hotkey and hotkey toggles a dedicated profile
+  - Import seoul color scheme for iterm2
+- Install Homebrew
+  - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- Install node/npm
+  - brew install node
+- Install vim with lua
+  - brew install luajit
+  - brew install vim --with-luajit
+- Install spf13
+  - Here for instructions (https://github.com/spf13/spf13-vim)
+  - Current as of April 2017 curl: curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+  - Remove Bundle 'amirh/HTML-AutoCloseTag' from .spf13-vim-3/.vimrc.bundles and add Bundle 'alvan/vim-closetag'
+  - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
+- Install tmux
+  - brew install tmux
+- Install tmuxinator
+  - sudo gem install tmuxinator
+  - Copy .tmuxinator/ from config to your root
+- Install the_silver_searcher
+  - brew install the_silver_searcher
+- Install reattach-to-user-namespace
+  - brew install reattach-to-user-namespace
+- Get powerline fonts
+  - git clone https://github.com/powerline/fonts.git
+  - cd into repo and run sh install.sh
+  - Change fonts on iterm profile to a powerline font
+- Install zsh
+  - brew install zsh
+- Install OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  - This should also set zsh to be default shell
+- Setup custom settings
+  - Copy .tmux.conf, .vimrc.local, .zshrc, and .gitconfig to ~/
+  - Change .zshrc path export reference to use your path to .oh-my-zsh
+  - Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
+- Install Icdiff (https://github.com/jeffkaufman/icdiff) if desired
+- Linting
+  - sudo npm install -g eslint eslint-config-airbnb eslint-plugin-import
+    eslint-plugin-jsx eslint-plugin-react eslint-plugin-jsx-a11y
+    eslint-plugin-mocha esformatter
+  - eslint --init in your project
+  - PluginInstall to ensure esformatter plugin is properly installed
+  - Change esformatter presets
+    - Go to (/usr/local/lib/node_modules/esformatter/lib/preset/);
+    - Modify default-whitespace-after and default-whitespace-before so that
+      ObjectPatternClosing or OpeningBrace have a 1 and not 0.
+    - To use esformatter type ',fe' in vim in normal or visual mode
