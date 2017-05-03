@@ -118,3 +118,7 @@ alias mux='tmuxinator'
 
 # http-server
 alias hs="node /usr/bin/http-server"
+
+# ag
+alias jag="ag -G '\.(js)$'"
+alias xag="ag -G '\.(jsx)$'"

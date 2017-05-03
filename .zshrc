@@ -105,3 +105,7 @@ alias go='git checkout'
 
 # tmuxinator
 alias mux='tmuxinator'
+
+# ag
+alias jag="ag -G '\.(js)$'"
+alias xag="ag -G '\.(jsx)$'"
