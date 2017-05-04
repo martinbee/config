@@ -1,8 +1,14 @@
 "Vim Tmux Navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
-"Vim Linting
+"Vim Linting Autoformatter
 Plugin 'millermedeiros/vim-esformatter'
+
+"Vim Autoclose html
+Plugin 'alvan/vim-closetag'
+
+" autoclose filetypes
+let g:closetag_filenames = "*.html,*.jsx,*.xhtml,*.phtml"etag'
 
 nnoremap <silent> <leader>fe :Esformatter<CR>
 vnoremap <silent> <leader>fe :EsformatterVisual<CR>
