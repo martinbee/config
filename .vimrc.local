@@ -4,14 +4,14 @@ Plugin 'christoomey/vim-tmux-navigator'
 "Vim Linting Autoformatter
 Plugin 'millermedeiros/vim-esformatter'
 
+nnoremap <silent> <leader>fe :Esformatter<CR>
+vnoremap <silent> <leader>fe :EsformatterVisual<CR>
+
 "Vim Autoclose html
 Plugin 'alvan/vim-closetag'
 
-" autoclose filetypes
-let g:closetag_filenames = "*.html,*.jsx,*.xhtml,*.phtml"etag'
-
-nnoremap <silent> <leader>fe :Esformatter<CR>
-vnoremap <silent> <leader>fe :EsformatterVisual<CR>
+" autoclose filenames
+let g:closetag_filenames = "*.html,*.jsx,*.xhtml,*.phtml"
 
 "Vim Linting
 set statusline+=%#warningmsg#
