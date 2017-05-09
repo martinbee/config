@@ -36,9 +36,10 @@
 - Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
 - Install Icdiff (https://github.com/jeffkaufman/icdiff) if desired
 - Linting
-  - npm install -g eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-mocha esformatter
+  - npm i -g eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-mocha babel-eslint
   - eslint --init in your project
 - Install esformatter
+  - npm i -g esformatter
   - PluginInstall to ensure esformatter plugin is properly installed
   - Change esformatter presets
     - Go to (/usr/local/lib/node_modules/esformatter/lib/preset/);
