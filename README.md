@@ -37,7 +37,7 @@
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   - This should also set zsh to be default shell
 - Setup custom settings
-  - Copy .tmux.conf, .vimrc.local, .zshrc, and .gitconfig to ~/
+  - Copy .tmux.conf, .vimrc.local, .zshrc, .czrc, and .gitconfig to ~/
   - Change .zshrc path export reference to use your path to .oh-my-zsh
   - Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
 - Install Icdiff (https://github.com/jeffkaufman/icdiff) if desired
@@ -52,3 +52,6 @@
     - Modify default-whitespace-after and default-whitespace-before so that
       ObjectPatternClosing or OpeningBrace have a 1 and not 0.
     - To use esformatter type ',fe' in vim in normal or visual mode
+- Install commitizen
+  - npm i -g commitizen
+  - npm i -g cz-conventional-changelog

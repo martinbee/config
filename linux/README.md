@@ -32,8 +32,10 @@
   - chsh -s $(which zsh)
 - Install OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-- Copy .tmux.conf, .vimrc.local, .zshrc, and .gitconfig to ~/
-- Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
+- Setup custom settings
+  - Copy .tmux.conf, .vimrc.local, .zshrc, .czrc, and .gitconfig to ~/
+  - Change .zshrc path export reference to use your path to .oh-my-zsh
+  - Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
 - Install Icdiff (https://github.com/jeffkaufman/icdiff) if desired
 - Linting
   - npm i -g eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-mocha babel-eslint
@@ -46,3 +48,6 @@
     - Modify default-whitespace-after and default-whitespace-before so that
       ObjectPatternClosing or OpeningBrace have a 1 and not 0.
     - To use esformatter type ',fe' in vim in normal or visual mode
+- Install commitizen
+  - npm i -g commitizen
+  - npm i -g cz-conventional-changelog

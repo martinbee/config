@@ -122,3 +122,8 @@ alias hs="node /usr/bin/http-server"
 # ag
 alias jag="ag -G '\.(js)$'"
 alias xag="ag -G '\.(jsx)$'"
+
+# npm
+function nss {
+  npm view $1 scripts;
+}
