@@ -100,6 +100,7 @@ alias gs='git status'
 alias gps='git push'
 alias ga='git add -A'
 alias gc='git commit -m'
+alias gz='git cz'
 alias gac='ga && gc'
 alias go='git checkout'
 
