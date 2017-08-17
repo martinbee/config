@@ -36,6 +36,9 @@
 - Install OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   - This should also set zsh to be default shell
+- Install NVM (optional)
+  - git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm into ~/.oh-my-zsh/custom/plugins/
+  - Add zsh-nvm to plugins in .zshrc (i.e. plugins=(git) now plugins=(git zsh-nvm))
 - Setup custom settings
   - Copy .tmux.conf, .vimrc.local, .zshrc, .czrc, and .gitconfig to ~/
   - Change .zshrc path export reference to use your path to .oh-my-zsh
