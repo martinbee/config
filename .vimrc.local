@@ -1,3 +1,6 @@
+"using experimental module loading in node
+autocmd BufNewFile,BufRead *.mjs setfiletype javascript
+
 "Vim Tmux Navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
@@ -25,11 +28,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_args="--ext .js,.jsx"
+" only use local eslint (comment out to use global lint)
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 "let g:syntastic_error_symbol = '❌'
 "let g:syntastic_style_error_symbol = '⁉️'
 "let g:syntastic_warning_symbol = '⚠️'
 "let g:syntastic_style_warning_symbol = '💩'
+" Start syntastic in debug mode (use :mes to get output)
+"let g:syntastic_debug = 3
 
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
