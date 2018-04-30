@@ -7,6 +7,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "Vim autoclose html
+Plugin 'alvan/vim-closetag'
+
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js, *.jsx'
 
 let g:syntastic_always_populate_loc_list = 1
@@ -30,7 +32,7 @@ highlight link SyntasticStyleWarningSign SignColumn
 " vim-airline configuration
 " symbols , , , , , , and 
 let g:airline#extensions#bufferline#enabled = 0
-let g:airline_theme = 'seoul256'
+let g:airline_theme = 'zenburn'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
