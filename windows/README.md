@@ -26,6 +26,7 @@
 - Setup custom settings
   - Copy .tmux.conf, .vimrc.local, .zshrc, .czrc, and .gitconfig to ~/
   - Change .zshrc path export reference to use your path to .oh-my-zsh
+  - Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
 - Install Icdiff (https://github.com/jeffkaufman/icdiff) if desired
 - Linting
   - npm i -g eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-mocha babel-eslint
