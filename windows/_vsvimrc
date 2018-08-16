@@ -1,0 +1,7 @@
+let mapleader = ","
+
+:inoremap jj <Esc>
+
+nnoremap ; :
+
+nnoremap <Leader>i mmgg=G`m

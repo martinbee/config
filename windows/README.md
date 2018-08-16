@@ -1,44 +1,7 @@
 # General Guidelines
-- Use package manager (apt, etc.)
-- Examples will be using apt
-
-- Install NVM
-  - curl -0- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-- Install node/npm
-  - nvm install --lts
-- Install spf13
-  - Here for instructions (https://github.com/spf13/spf13-vim)
-  - Current as of April 2017 curl: curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
-  - Remove Bundle 'amirh/HTML-AutoCloseTag' from .spf13-vim-3/.vimrc.bundles
-  - Replace above bundle with 'alvan/vim-closetag'
-  - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
-- Install tmux
-  - sudo apt-get install tmux
-- Gem install tmuxinator if desired
-  - Copy .tmuxinator/ from config to your root
-- Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
-- Install zsh
-  - sudo apt-get install zsh
-- Set zsh to be default shell
-  - chsh -s $(which zsh)
-- Install OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
-  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-- Setup custom settings
-  - Copy .tmux.conf, .vimrc.local, .zshrc, .czrc, and .gitconfig to ~/
-  - Change .zshrc path export reference to use your path to .oh-my-zsh
-  - Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
-- Install Icdiff (https://github.com/jeffkaufman/icdiff) if desired
-- Linting
-  - npm i -g eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-mocha babel-eslint
-  - eslint --init in your project
-- Install esformatter
-  - npm i -g esformatter
-  - PluginInstall to ensure esformatter plugin is properly installed
-  - Change esformatter presets
-    - Go to (/usr/local/lib/node_modules/esformatter/lib/preset/);
-    - Modify default-whitespace-after and default-whitespace-before so that
-      ObjectPatternClosing or OpeningBrace have a 1 and not 0.
-    - To use esformatter type ',fe' in vim in normal or visual mode
-- Install commitizen
-  - npm i -g commitizen
-  - npm i -g cz-conventional-changelog
+- You have two options:
+-- Vim in Visual Studio using vsvim (in which case, copy the "./\_vsvimrc" file
+to your windows root)
+-- Try to use windows subystem linux or cmnder (in which case use the linux
+setup)
+-- In the future a vscode option will be added
