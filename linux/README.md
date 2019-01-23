@@ -24,6 +24,10 @@
   - Disable spell (remove set spell line in .spf13-vim-3/.vimrc)
 - Install tmux
   - sudo apt-get install tmux
+- Install xclip
+  - sudo apt-get install xclip
+- Install tmux-yank
+  - See [here](https://github.com/tmux-plugins/tmux-yank) for manual installation
 - Gem install tmuxinator if desired
   - Copy .tmuxinator/ from config to your root
 - Clone this repo and run install.sh to get fonts: https://github.com/powerline/fonts.git
