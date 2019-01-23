@@ -14,7 +14,7 @@ vnoremap <silent> <leader>fe :EsformatterVisual<CR>
 Plugin 'alvan/vim-closetag'
 
 " autoclose filenames
-let g:closetag_filenames = "*.html,*.jsx,*.xhtml,*.phtml"
+let g:closetag_filenames = "*.html,*.jsx,*.xhtml,*.phtml,*.js"
 
 "Vim Linting
 set statusline+=%#warningmsg#
@@ -128,3 +128,13 @@ color seoul256
 
 "Light scheme (change color scheme to light background)
 "set background=light
+
+"React specific ------------
+Plugin 'mxw/vim-jsx'
+
+"Async lint
+Plugin 'w0rp/ale'
+
+let g:ale_sign_error = '●' "Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 "Less distracting when opening a new file
