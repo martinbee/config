@@ -1,3 +1,8 @@
+# VSCODE SETTINGS SYNC
+https://gist.github.com/martinbee/fd073ec33c8d1b08d508a48136f99391
+
+^Update eslint.nodePath to point towards global node modules
+
 # General Guidelines
 - Use package manager (Homebrew, apt, etc.)
 - For Mac we will use Homebrew
