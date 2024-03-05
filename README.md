@@ -21,8 +21,9 @@ https://gist.github.com/martinbee/fd073ec33c8d1b08d508a48136f99391
 - Install OhMyZsh: https://github.com/robbyrussell/oh-my-zshZsh
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   - This should also set zsh to be default shell
-- Install NVM
-  - https://github.com/nvm-sh/nvm
+  - Update .zshrc to point to correct .oh-my-zsh path
+- Install NVM (we use zsh-nvm for a variety of reasons)
+  - git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 - Setup custom settings
   - Copy .vimrc.local, .zshrc, to ~/
   - Change .zshrc path export reference to use your path to .oh-my-zsh
