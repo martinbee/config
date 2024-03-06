@@ -22,8 +22,10 @@ https://gist.github.com/martinbee/fd073ec33c8d1b08d508a48136f99391
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   - This should also set zsh to be default shell
   - Update .zshrc to point to correct .oh-my-zsh path
-- Install NVM (we use zsh-nvm for a variety of reasons)
+- Install NVM (we use zsh to keep this plugin up to date and seamless)
   - git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+- Install git-open (we use zsh to keep this plugin up to date and seamless)
+  - git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open
 - Setup custom settings
   - Copy .vimrc.local, .zshrc, to ~/
   - Change .zshrc path export reference to use your path to .oh-my-zsh
