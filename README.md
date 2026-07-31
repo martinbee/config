@@ -1,14 +1,6 @@
-# VSCODE SETTINGS SYNC
-https://gist.github.com/martinbee/fd073ec33c8d1b08d508a48136f99391
-
-^Update eslint.nodePath to point towards global node modules
-
 # General Guidelines
 - Use package manager (Homebrew, apt, etc.)
-- For Mac we will use Homebrew
-
-- Install VsCode and sign in using github
-- Install Cursor and import VsCode Settings (https://cursor.sh/)
+  - For Mac we will use Homebrew
 - Install Homebrew
   - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 - Install spf13
@@ -30,3 +22,26 @@ https://gist.github.com/martinbee/fd073ec33c8d1b08d508a48136f99391
   - Copy .vimrc.local, .zshrc, to ~/
   - Change .zshrc path export reference to use your path to .oh-my-zsh
   - Copy custom airline theme seoul256 to .vim/bundle/vim-airline-themes/autoload/airline/themes/
+
+## TMUX
+- Install tmux
+  - brew install tmux
+- Copy .tmux.conf to ~/
+- Install claude-tmux
+  - https://github.com/nielsgroen/claude-tmux
+
+## CMUX (use alongside TMUX)
+- Download and install cmux from https://cmux.com/
+- Copy `ghostty-themes/seoul` to `~/.config/ghostty/themes/seoul`
+- Add `theme = seoul` to `~/.config/ghostty/config`
+- Reload the config in cmux with ⌘⇧, to apply the theme
+- Use tmux and vim inside cmux for session/window management and editing
+
+## Cursor/VsCode
+- Install VsCode and sign in using github
+- Install Cursor and import VsCode Settings (https://cursor.sh/)
+
+### VSCODE SETTINGS SYNC
+https://gist.github.com/martinbee/fd073ec33c8d1b08d508a48136f99391
+
+^Update eslint.nodePath to point towards global node modules
