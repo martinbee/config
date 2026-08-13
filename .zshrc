@@ -4,11 +4,16 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/martinbee/.oh-my-zsh"
 
+# Auto load from .nvmrc
+export NVM_AUTO_USE=true
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,10 +73,18 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-nvm git-open)
+plugins=(git zsh-nvm git-open zsh-syntax-highlighting zsh-autosuggestions)
+#
+# Install yarn if on new version of nvm
+if ! command -v yarn &> /dev/null
+then
+  echo "yarn could not be found, installing..."
+  npm install -g yarn
+fi
 
 # Home Brew
 export PATH="/usr/local/sbin:$PATH"
+export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 # Android Studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -104,6 +117,17 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# fzf — fuzzy finder shell integration (Ctrl-T paths, Ctrl-R history, Alt-C cd)
+if command -v fzf >/dev/null 2>&1; then
+  source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
+  source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+
+  # Use ripgrep so Ctrl-T / ** completion respect .gitignore and skip .git
+  export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
