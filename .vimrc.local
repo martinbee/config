@@ -171,6 +171,16 @@ nnoremap <silent> <C-p> :ProjectFiles<CR>
 " ,b  -> jump between open buffers
 nnoremap <silent> <leader>b :Buffers<CR>
 
+" Make :Rg see dotfiles/dotdirs (e.g. .semaphore/), matching :Files above.
+" Ripgrep skips anything starting with '.' by default; fzf.vim's stock :Rg
+" doesn't pass --hidden, so hidden dirs are silently invisible to grep even
+" though :Files finds them fine. Same command as fzf.vim's own definition,
+" plus --hidden.
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case --hidden --glob "!.git/*" -- '.fzf#shellescape(<q-args>),
+  \   fzf#vim#with_preview(), <bang>0)
+
 " ,g and Ctrl-G -> live project-wide ripgrep search (VSCode Cmd+Shift+F)
 " (Ctrl-Shift-P can't be distinguished from Ctrl-P in this terminal, so Ctrl-G
 "  — mnemonic for grep — is used instead. Overrides Vim's default file-info.)
